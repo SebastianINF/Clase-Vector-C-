@@ -1,4 +1,4 @@
-# Trabajo de la Universidad: Clase Vector en JavaScript
+# Trabajo de la Universidad: Clase Vector en C#
 
 Este proyecto representa un trabajo académico de la universidad en el que desarrollamos una clase Vector en JavaScript. Esta clase permite realizar cálculos matemáticos utilizando un array como base y está diseñada para llevar a cabo una variedad de operaciones matemáticas.
 
