@@ -82,15 +82,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tarea
+namespace Clase_Vector
 
-class vector
+class Vector
     {
         private const int max = 100;
         private int[] v;
         private int n;
-        // Constructor de la clase vector
-        public vector()
+        // Constructor de la clase Vector
+        public Vector()
         {
             v = new int[max];
             n = 0;
@@ -137,7 +137,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tarea
+namespace Clase_Vector
 {
     class NEnt
     {
