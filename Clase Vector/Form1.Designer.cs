@@ -1,4 +1,4 @@
-﻿namespace Tarea
+﻿namespace Clase_Vector
 {
     partial class Form1
     {
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,30 +57,6 @@
             this.interseccionDeConjuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diferenciaDeConjuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diferenciaDeConjuntosBAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarRandomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.descargarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenamientoPorIntercambioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenamientoBurbujaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenamientoPorInserciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenamientoQuickSortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.segmentarParYNoParToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.segmentarPrimoYNoPrimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.intercalarParYNoParToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.intercalarPrimoYNoPrimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.descargarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.menu12ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invertirVectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contarElementosDeLasPosicionesSubmultiplosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,11 +70,39 @@
             this.ordenarElementosDeUnSegmentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encontrarElementoMenosRepetidoDeUnSegmentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encontrarLaFrecuenciaDeDistribuciónDeUnSegmentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.segmentarCapicuasYNoCapicuasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.menu2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarRandomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descargarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarElementoXElementoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenamientoPorIntercambioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenamientoBurbujaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenamientoPorInserciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenamientoQuickSortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.segmentarParYNoParToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.segmentarPrimoYNoPrimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.segmentarCapicuasYNoCapicuasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.intercalarParYNoParToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.intercalarPrimoYNoPrimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.descargarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarElementoXElementoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.grabarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -317,207 +321,6 @@
             this.diferenciaDeConjuntosBAToolStripMenuItem.Text = "Diferencia de Conjuntos B - A";
             this.diferenciaDeConjuntosBAToolStripMenuItem.Click += new System.EventHandler(this.diferenciaDeConjuntosBAToolStripMenuItem_Click);
             // 
-            // menu2ToolStripMenuItem
-            // 
-            this.menu2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargarRandomToolStripMenuItem,
-            this.descargarToolStripMenuItem1,
-            this.cargarElementoXElementoToolStripMenuItem,
-            this.ordenamientoPorIntercambioToolStripMenuItem2,
-            this.ordenamientoBurbujaToolStripMenuItem,
-            this.ordenamientoPorInserciónToolStripMenuItem,
-            this.ordenamientoQuickSortToolStripMenuItem,
-            this.segmentarParYNoParToolStripMenuItem,
-            this.segmentarPrimoYNoPrimoToolStripMenuItem,
-            this.segmentarCapicuasYNoCapicuasToolStripMenuItem,
-            this.intercalarParYNoParToolStripMenuItem,
-            this.intercalarPrimoYNoPrimoToolStripMenuItem});
-            this.menu2ToolStripMenuItem.Name = "menu2ToolStripMenuItem";
-            this.menu2ToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
-            this.menu2ToolStripMenuItem.Text = "Menu V2";
-            // 
-            // cargarRandomToolStripMenuItem
-            // 
-            this.cargarRandomToolStripMenuItem.Name = "cargarRandomToolStripMenuItem";
-            this.cargarRandomToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.cargarRandomToolStripMenuItem.Text = "Cargar";
-            this.cargarRandomToolStripMenuItem.Click += new System.EventHandler(this.cargarRandomToolStripMenuItem_Click);
-            // 
-            // descargarToolStripMenuItem1
-            // 
-            this.descargarToolStripMenuItem1.Name = "descargarToolStripMenuItem1";
-            this.descargarToolStripMenuItem1.Size = new System.Drawing.Size(318, 26);
-            this.descargarToolStripMenuItem1.Text = "Descargar";
-            this.descargarToolStripMenuItem1.Click += new System.EventHandler(this.descargarToolStripMenuItem1_Click);
-            // 
-            // ordenamientoPorIntercambioToolStripMenuItem2
-            // 
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Name = "ordenamientoPorIntercambioToolStripMenuItem2";
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Size = new System.Drawing.Size(318, 26);
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Text = "Ordenamiento Por Intercambio";
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Click += new System.EventHandler(this.ordenamientoPorIntercambioToolStripMenuItem2_Click);
-            // 
-            // ordenamientoBurbujaToolStripMenuItem
-            // 
-            this.ordenamientoBurbujaToolStripMenuItem.Name = "ordenamientoBurbujaToolStripMenuItem";
-            this.ordenamientoBurbujaToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.ordenamientoBurbujaToolStripMenuItem.Text = "Ordenamiento Burbuja";
-            this.ordenamientoBurbujaToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoBurbujaToolStripMenuItem_Click);
-            // 
-            // ordenamientoPorInserciónToolStripMenuItem
-            // 
-            this.ordenamientoPorInserciónToolStripMenuItem.Name = "ordenamientoPorInserciónToolStripMenuItem";
-            this.ordenamientoPorInserciónToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.ordenamientoPorInserciónToolStripMenuItem.Text = "Ordenamiento Por Inserción";
-            this.ordenamientoPorInserciónToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoPorInserciónToolStripMenuItem_Click);
-            // 
-            // ordenamientoQuickSortToolStripMenuItem
-            // 
-            this.ordenamientoQuickSortToolStripMenuItem.Name = "ordenamientoQuickSortToolStripMenuItem";
-            this.ordenamientoQuickSortToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.ordenamientoQuickSortToolStripMenuItem.Text = "Ordenamiento Quick Sort";
-            this.ordenamientoQuickSortToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoQuickSortToolStripMenuItem_Click);
-            // 
-            // segmentarParYNoParToolStripMenuItem
-            // 
-            this.segmentarParYNoParToolStripMenuItem.Name = "segmentarParYNoParToolStripMenuItem";
-            this.segmentarParYNoParToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.segmentarParYNoParToolStripMenuItem.Text = "Segmentar Par Y No Par";
-            this.segmentarParYNoParToolStripMenuItem.Click += new System.EventHandler(this.segmentarParYNoParToolStripMenuItem_Click);
-            // 
-            // segmentarPrimoYNoPrimoToolStripMenuItem
-            // 
-            this.segmentarPrimoYNoPrimoToolStripMenuItem.Name = "segmentarPrimoYNoPrimoToolStripMenuItem";
-            this.segmentarPrimoYNoPrimoToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.segmentarPrimoYNoPrimoToolStripMenuItem.Text = "Segmentar Primo Y No Primo";
-            this.segmentarPrimoYNoPrimoToolStripMenuItem.Click += new System.EventHandler(this.segmentarPrimoYNoPrimoToolStripMenuItem_Click);
-            // 
-            // intercalarParYNoParToolStripMenuItem
-            // 
-            this.intercalarParYNoParToolStripMenuItem.Name = "intercalarParYNoParToolStripMenuItem";
-            this.intercalarParYNoParToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.intercalarParYNoParToolStripMenuItem.Text = "Intercalar Par Y No Par";
-            this.intercalarParYNoParToolStripMenuItem.Click += new System.EventHandler(this.intercalarParYNoParToolStripMenuItem_Click);
-            // 
-            // intercalarPrimoYNoPrimoToolStripMenuItem
-            // 
-            this.intercalarPrimoYNoPrimoToolStripMenuItem.Name = "intercalarPrimoYNoPrimoToolStripMenuItem";
-            this.intercalarPrimoYNoPrimoToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.intercalarPrimoYNoPrimoToolStripMenuItem.Text = "Intercalar Primo Y No Primo";
-            this.intercalarPrimoYNoPrimoToolStripMenuItem.Click += new System.EventHandler(this.intercalarPrimoYNoPrimoToolStripMenuItem_Click);
-            // 
-            // menu3ToolStripMenuItem
-            // 
-            this.menu3ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargarToolStripMenuItem1,
-            this.descargarToolStripMenuItem2,
-            this.cargarElementoXElementoToolStripMenuItem1});
-            this.menu3ToolStripMenuItem.Name = "menu3ToolStripMenuItem";
-            this.menu3ToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
-            this.menu3ToolStripMenuItem.Text = "Menu V3";
-            // 
-            // cargarToolStripMenuItem1
-            // 
-            this.cargarToolStripMenuItem1.Name = "cargarToolStripMenuItem1";
-            this.cargarToolStripMenuItem1.Size = new System.Drawing.Size(275, 26);
-            this.cargarToolStripMenuItem1.Text = "Cargar";
-            this.cargarToolStripMenuItem1.Click += new System.EventHandler(this.cargarToolStripMenuItem1_Click);
-            // 
-            // descargarToolStripMenuItem2
-            // 
-            this.descargarToolStripMenuItem2.Name = "descargarToolStripMenuItem2";
-            this.descargarToolStripMenuItem2.Size = new System.Drawing.Size(275, 26);
-            this.descargarToolStripMenuItem2.Text = "Descargar";
-            this.descargarToolStripMenuItem2.Click += new System.EventHandler(this.descargarToolStripMenuItem2_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(432, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(455, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(432, 327);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(455, 22);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(432, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(108, 22);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(615, 141);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(108, 22);
-            this.textBox4.TabIndex = 4;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(779, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 22);
-            this.textBox5.TabIndex = 5;
-            // 
-            // chart1
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(12, 205);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(398, 262);
-            this.chart1.TabIndex = 6;
-            this.chart1.Text = "chart1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(429, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "N Elementos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(612, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "inicial";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(776, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "final";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(432, 427);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(455, 22);
-            this.textBox6.TabIndex = 10;
-            // 
             // menu12ToolStripMenuItem
             // 
             this.menu12ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -533,7 +336,9 @@
             this.ordenarElementosDeUnSegmentoToolStripMenuItem,
             this.encontrarElementoMenosRepetidoDeUnSegmentoToolStripMenuItem,
             this.encontrarLaFrecuenciaDeDistribuciónDeUnSegmentoToolStripMenuItem,
-            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem});
+            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem,
+            this.grabarToolStripMenuItem,
+            this.leerToolStripMenuItem});
             this.menu12ToolStripMenuItem.Name = "menu12ToolStripMenuItem";
             this.menu12ToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.menu12ToolStripMenuItem.Text = "Menu V1";
@@ -622,6 +427,95 @@
             this.encontrarLaFrecuenciaDeDistribuciónDeUnSegmentoToolStripMenuItem.Text = "Encontrar La Frecuencia De Distribución De Un Segmento";
             this.encontrarLaFrecuenciaDeDistribuciónDeUnSegmentoToolStripMenuItem.Click += new System.EventHandler(this.encontrarLaFrecuenciaDeDistribuciónDeUnSegmentoToolStripMenuItem_Click);
             // 
+            // intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem
+            // 
+            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Name = "intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem";
+            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
+            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Text = "Intercalar Primos Y No Primos De Un Segmento";
+            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Click += new System.EventHandler(this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem_Click);
+            // 
+            // menu2ToolStripMenuItem
+            // 
+            this.menu2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cargarRandomToolStripMenuItem,
+            this.descargarToolStripMenuItem1,
+            this.cargarElementoXElementoToolStripMenuItem,
+            this.ordenamientoPorIntercambioToolStripMenuItem2,
+            this.ordenamientoBurbujaToolStripMenuItem,
+            this.ordenamientoPorInserciónToolStripMenuItem,
+            this.ordenamientoQuickSortToolStripMenuItem,
+            this.segmentarParYNoParToolStripMenuItem,
+            this.segmentarPrimoYNoPrimoToolStripMenuItem,
+            this.segmentarCapicuasYNoCapicuasToolStripMenuItem,
+            this.intercalarParYNoParToolStripMenuItem,
+            this.intercalarPrimoYNoPrimoToolStripMenuItem});
+            this.menu2ToolStripMenuItem.Name = "menu2ToolStripMenuItem";
+            this.menu2ToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.menu2ToolStripMenuItem.Text = "Menu V2";
+            // 
+            // cargarRandomToolStripMenuItem
+            // 
+            this.cargarRandomToolStripMenuItem.Name = "cargarRandomToolStripMenuItem";
+            this.cargarRandomToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.cargarRandomToolStripMenuItem.Text = "Cargar";
+            this.cargarRandomToolStripMenuItem.Click += new System.EventHandler(this.cargarRandomToolStripMenuItem_Click);
+            // 
+            // descargarToolStripMenuItem1
+            // 
+            this.descargarToolStripMenuItem1.Name = "descargarToolStripMenuItem1";
+            this.descargarToolStripMenuItem1.Size = new System.Drawing.Size(318, 26);
+            this.descargarToolStripMenuItem1.Text = "Descargar";
+            this.descargarToolStripMenuItem1.Click += new System.EventHandler(this.descargarToolStripMenuItem1_Click);
+            // 
+            // cargarElementoXElementoToolStripMenuItem
+            // 
+            this.cargarElementoXElementoToolStripMenuItem.Name = "cargarElementoXElementoToolStripMenuItem";
+            this.cargarElementoXElementoToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.cargarElementoXElementoToolStripMenuItem.Text = "Cargar Elemento X Elemento";
+            this.cargarElementoXElementoToolStripMenuItem.Click += new System.EventHandler(this.cargarElementoXElementoToolStripMenuItem_Click);
+            // 
+            // ordenamientoPorIntercambioToolStripMenuItem2
+            // 
+            this.ordenamientoPorIntercambioToolStripMenuItem2.Name = "ordenamientoPorIntercambioToolStripMenuItem2";
+            this.ordenamientoPorIntercambioToolStripMenuItem2.Size = new System.Drawing.Size(318, 26);
+            this.ordenamientoPorIntercambioToolStripMenuItem2.Text = "Ordenamiento Por Intercambio";
+            this.ordenamientoPorIntercambioToolStripMenuItem2.Click += new System.EventHandler(this.ordenamientoPorIntercambioToolStripMenuItem2_Click);
+            // 
+            // ordenamientoBurbujaToolStripMenuItem
+            // 
+            this.ordenamientoBurbujaToolStripMenuItem.Name = "ordenamientoBurbujaToolStripMenuItem";
+            this.ordenamientoBurbujaToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.ordenamientoBurbujaToolStripMenuItem.Text = "Ordenamiento Burbuja";
+            this.ordenamientoBurbujaToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoBurbujaToolStripMenuItem_Click);
+            // 
+            // ordenamientoPorInserciónToolStripMenuItem
+            // 
+            this.ordenamientoPorInserciónToolStripMenuItem.Name = "ordenamientoPorInserciónToolStripMenuItem";
+            this.ordenamientoPorInserciónToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.ordenamientoPorInserciónToolStripMenuItem.Text = "Ordenamiento Por Inserción";
+            this.ordenamientoPorInserciónToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoPorInserciónToolStripMenuItem_Click);
+            // 
+            // ordenamientoQuickSortToolStripMenuItem
+            // 
+            this.ordenamientoQuickSortToolStripMenuItem.Name = "ordenamientoQuickSortToolStripMenuItem";
+            this.ordenamientoQuickSortToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.ordenamientoQuickSortToolStripMenuItem.Text = "Ordenamiento Quick Sort";
+            this.ordenamientoQuickSortToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoQuickSortToolStripMenuItem_Click);
+            // 
+            // segmentarParYNoParToolStripMenuItem
+            // 
+            this.segmentarParYNoParToolStripMenuItem.Name = "segmentarParYNoParToolStripMenuItem";
+            this.segmentarParYNoParToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.segmentarParYNoParToolStripMenuItem.Text = "Segmentar Par Y No Par";
+            this.segmentarParYNoParToolStripMenuItem.Click += new System.EventHandler(this.segmentarParYNoParToolStripMenuItem_Click);
+            // 
+            // segmentarPrimoYNoPrimoToolStripMenuItem
+            // 
+            this.segmentarPrimoYNoPrimoToolStripMenuItem.Name = "segmentarPrimoYNoPrimoToolStripMenuItem";
+            this.segmentarPrimoYNoPrimoToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.segmentarPrimoYNoPrimoToolStripMenuItem.Text = "Segmentar Primo Y No Primo";
+            this.segmentarPrimoYNoPrimoToolStripMenuItem.Click += new System.EventHandler(this.segmentarPrimoYNoPrimoToolStripMenuItem_Click);
+            // 
             // segmentarCapicuasYNoCapicuasToolStripMenuItem
             // 
             this.segmentarCapicuasYNoCapicuasToolStripMenuItem.Name = "segmentarCapicuasYNoCapicuasToolStripMenuItem";
@@ -629,12 +523,138 @@
             this.segmentarCapicuasYNoCapicuasToolStripMenuItem.Text = "Segmentar Capicuas Y No Capicuas";
             this.segmentarCapicuasYNoCapicuasToolStripMenuItem.Click += new System.EventHandler(this.segmentarCapicuasYNoCapicuasToolStripMenuItem_Click);
             // 
-            // intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem
+            // intercalarParYNoParToolStripMenuItem
             // 
-            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Name = "intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem";
-            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
-            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Text = "Intercalar Primos Y No Primos De Un Segmento";
-            this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Click += new System.EventHandler(this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem_Click);
+            this.intercalarParYNoParToolStripMenuItem.Name = "intercalarParYNoParToolStripMenuItem";
+            this.intercalarParYNoParToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.intercalarParYNoParToolStripMenuItem.Text = "Intercalar Par Y No Par";
+            this.intercalarParYNoParToolStripMenuItem.Click += new System.EventHandler(this.intercalarParYNoParToolStripMenuItem_Click);
+            // 
+            // intercalarPrimoYNoPrimoToolStripMenuItem
+            // 
+            this.intercalarPrimoYNoPrimoToolStripMenuItem.Name = "intercalarPrimoYNoPrimoToolStripMenuItem";
+            this.intercalarPrimoYNoPrimoToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
+            this.intercalarPrimoYNoPrimoToolStripMenuItem.Text = "Intercalar Primo Y No Primo";
+            this.intercalarPrimoYNoPrimoToolStripMenuItem.Click += new System.EventHandler(this.intercalarPrimoYNoPrimoToolStripMenuItem_Click);
+            // 
+            // menu3ToolStripMenuItem
+            // 
+            this.menu3ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cargarToolStripMenuItem1,
+            this.descargarToolStripMenuItem2,
+            this.cargarElementoXElementoToolStripMenuItem1});
+            this.menu3ToolStripMenuItem.Name = "menu3ToolStripMenuItem";
+            this.menu3ToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.menu3ToolStripMenuItem.Text = "Menu V3";
+            // 
+            // cargarToolStripMenuItem1
+            // 
+            this.cargarToolStripMenuItem1.Name = "cargarToolStripMenuItem1";
+            this.cargarToolStripMenuItem1.Size = new System.Drawing.Size(275, 26);
+            this.cargarToolStripMenuItem1.Text = "Cargar";
+            this.cargarToolStripMenuItem1.Click += new System.EventHandler(this.cargarToolStripMenuItem1_Click);
+            // 
+            // descargarToolStripMenuItem2
+            // 
+            this.descargarToolStripMenuItem2.Name = "descargarToolStripMenuItem2";
+            this.descargarToolStripMenuItem2.Size = new System.Drawing.Size(275, 26);
+            this.descargarToolStripMenuItem2.Text = "Descargar";
+            this.descargarToolStripMenuItem2.Click += new System.EventHandler(this.descargarToolStripMenuItem2_Click);
+            // 
+            // cargarElementoXElementoToolStripMenuItem1
+            // 
+            this.cargarElementoXElementoToolStripMenuItem1.Name = "cargarElementoXElementoToolStripMenuItem1";
+            this.cargarElementoXElementoToolStripMenuItem1.Size = new System.Drawing.Size(275, 26);
+            this.cargarElementoXElementoToolStripMenuItem1.Text = "Cargar Elemento X Elemento";
+            this.cargarElementoXElementoToolStripMenuItem1.Click += new System.EventHandler(this.cargarElementoXElementoToolStripMenuItem1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(432, 221);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(455, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(432, 327);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(455, 22);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(432, 141);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(108, 22);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(615, 141);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(108, 22);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(779, 141);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(108, 22);
+            this.textBox5.TabIndex = 5;
+            // 
+            // chart1
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
+            this.chart1.Location = new System.Drawing.Point(12, 205);
+            this.chart1.Name = "chart1";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(398, 262);
+            this.chart1.TabIndex = 6;
+            this.chart1.Text = "chart1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(429, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "N Elementos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(612, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "inicial";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(776, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "final";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(432, 427);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(455, 22);
+            this.textBox6.TabIndex = 10;
             // 
             // button1
             // 
@@ -646,19 +666,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cargarElementoXElementoToolStripMenuItem
+            // grabarToolStripMenuItem
             // 
-            this.cargarElementoXElementoToolStripMenuItem.Name = "cargarElementoXElementoToolStripMenuItem";
-            this.cargarElementoXElementoToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
-            this.cargarElementoXElementoToolStripMenuItem.Text = "Cargar Elemento X Elemento";
-            this.cargarElementoXElementoToolStripMenuItem.Click += new System.EventHandler(this.cargarElementoXElementoToolStripMenuItem_Click);
+            this.grabarToolStripMenuItem.Name = "grabarToolStripMenuItem";
+            this.grabarToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
+            this.grabarToolStripMenuItem.Text = "Grabar";
+            this.grabarToolStripMenuItem.Click += new System.EventHandler(this.grabarToolStripMenuItem_Click);
             // 
-            // cargarElementoXElementoToolStripMenuItem1
+            // leerToolStripMenuItem
             // 
-            this.cargarElementoXElementoToolStripMenuItem1.Name = "cargarElementoXElementoToolStripMenuItem1";
-            this.cargarElementoXElementoToolStripMenuItem1.Size = new System.Drawing.Size(275, 26);
-            this.cargarElementoXElementoToolStripMenuItem1.Text = "Cargar Elemento X Elemento";
-            this.cargarElementoXElementoToolStripMenuItem1.Click += new System.EventHandler(this.cargarElementoXElementoToolStripMenuItem1_Click);
+            this.leerToolStripMenuItem.Name = "leerToolStripMenuItem";
+            this.leerToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
+            this.leerToolStripMenuItem.Text = "Leer";
+            this.leerToolStripMenuItem.Click += new System.EventHandler(this.leerToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -759,6 +783,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem cargarElementoXElementoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargarElementoXElementoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem grabarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leerToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

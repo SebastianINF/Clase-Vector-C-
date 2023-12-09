@@ -9,22 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
-namespace Tarea
+namespace Clase_Vector
 {
     public partial class Form1 : Form
     {
-        vector V1;
-        vector V2;
-        vector V3;
+        Vector V1;
+        Vector V2;
+        Vector V3;
         public Form1()
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            V1 = new vector();
-            V2 = new vector();
-            V3 = new vector();
+            V1 = new Vector();
+            V2 = new Vector();
+            V3 = new Vector();
         }
         private void CargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace Tarea
 
         private void selecPrimosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V2 = new vector();
+            V2 = new Vector();
             V1.SeleccionarPrimos(ref V2);
         }
 
@@ -65,7 +65,7 @@ namespace Tarea
 
         private void cargarEleXEleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V1 = new vector();
+            V1 = new Vector();
             int n1 = int.Parse(Interaction.InputBox("Numero de Elementos:"));
             for (int i = 1; i <= n1; i++)
                 V1.CargarElementoXElemento(int.Parse(Interaction.InputBox($"Elemento {i}:")));
@@ -73,7 +73,7 @@ namespace Tarea
 
         private void cargarSerieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V1 = new vector();
+            V1 = new Vector();
             int numeroDePosiciones = int.Parse(Interaction.InputBox("Cuantos Elementos quiere para la serie Aritmetica?"));
             int valorInicial = int.Parse(Interaction.InputBox("Valor Inicial: "));
             int razon = int.Parse(Interaction.InputBox("Valor de la razon: "));
@@ -87,14 +87,14 @@ namespace Tarea
 
         private void selecPosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V2 = new vector();
+            V2 = new Vector();
             int intervalo = int.Parse(Interaction.InputBox("Ingresa el Intervalo: "));
             V1.SeleccionarPorPosicion(intervalo, ref V2);
         }
 
         private void selecNoPrimosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V2 = new vector();
+            V2 = new Vector();
             V1.SeleccionarNoPrimos(ref V2);
         }
 
@@ -118,7 +118,7 @@ namespace Tarea
 
         private void cargarSerieFobonacciToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V1 = new vector();
+            V1 = new Vector();
             int numeroDePosiciones = int.Parse(Interaction.InputBox("Numero de Terminos de la serie de Fibonacci: "));
             V1.CargarSerieFibonacci(numeroDePosiciones);
         }
@@ -140,7 +140,7 @@ namespace Tarea
 
         private void seleccionarBuenosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V2 = new vector();
+            V2 = new Vector();
             V1.SeleccionarBuenos(ref V2);
         }
 
@@ -197,14 +197,14 @@ namespace Tarea
         }
         private void unionDeConjuntosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V3 = new vector();
+            V3 = new Vector();
             V3.UnionDeConjuntos(V1, V2);
             textBox6.Text = V3.Descargar();
         }
 
         private void interseccionDeConjuntosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V3 = new vector();
+            V3 = new Vector();
             V3.InterseccionDeConjuntos(V1, V2);
             textBox6.Text = V3.Descargar();
         }
@@ -212,14 +212,14 @@ namespace Tarea
 
         private void diferenciaDeConjuntosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V3 = new vector();
+            V3 = new Vector();
             V3.DiferenciaDeConjuntosAB(V1, V2);
             textBox6.Text = V3.Descargar();
         }
 
         private void diferenciaDeConjuntosBAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V3 = new vector();
+            V3 = new Vector();
             V3.DiferenciaDeConjuntosBA(V1, V2);
             textBox6.Text = V3.Descargar();
         }
@@ -326,7 +326,7 @@ namespace Tarea
 
         private void insertarVector2En1RespectoAUnaPosiciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V3 = new vector();
+            V3 = new Vector();
             int posicion = int.Parse(Interaction.InputBox("Introduzca la posición a insertar: "));
             if (V1.RetornarDimension() == 0 || V2.RetornarDimension() == 0)
                 MessageBox.Show("Tienes que cargar el Vector V1 y el V2");
@@ -396,8 +396,8 @@ namespace Tarea
                 MessageBox.Show("Posición fuera de los limites del vector");
             else
             {
-                V2 = new vector();
-                V3 = new vector();
+                V2 = new Vector();
+                V3 = new Vector();
 
                 V1.EncontrarLaFrecuenciaDeDistribucionEntreUnSegmento(a, b, ref V2, ref V3);
                 textBox2.Text = V2.Descargar();
@@ -434,16 +434,16 @@ namespace Tarea
 
         private void button1_Click(object sender, EventArgs e)
         {
-            V1 = new vector();
-            V2 = new vector();
-            V3 = new vector();
+            V1 = new Vector();
+            V2 = new Vector();
+            V3 = new Vector();
 
             ResetearTextBoxs();
         }
 
         private void cargarElementoXElementoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V2 = new vector();
+            V2 = new Vector();
             int n1 = int.Parse(Interaction.InputBox("Numero de Elementos:"));
             for (int i = 1; i <= n1; i++)
                 V2.CargarElementoXElemento(int.Parse(Interaction.InputBox($"Elemento {i}:")));
@@ -451,10 +451,22 @@ namespace Tarea
 
         private void cargarElementoXElementoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            V3 = new vector();
+            V3 = new Vector();
             int n1 = int.Parse(Interaction.InputBox("Numero de Elementos:"));
             for (int i = 1; i <= n1; i++)
                 V3.CargarElementoXElemento(int.Parse(Interaction.InputBox($"Elemento {i}:")));
+        }
+
+        private void grabarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+            V1.Grabar(saveFileDialog1.FileName);
+        }
+
+        private void leerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            V1.Leer(openFileDialog1.FileName);
         }
     }
 }

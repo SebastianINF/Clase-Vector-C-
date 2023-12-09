@@ -4,18 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tarea
+namespace Clase_Vector
 {
-    class vector
+    class Vector
     {
-        private const int max = 100;
-        private int[] v;
-        private int n;
+        public int[] v;
+        public int n;
+
+        ArchSec A1;
         // Constructor de la clase vector
-        public vector()
+        public Vector()
         {
-            v = new int[max];
+            v = new int[100];
             n = 0;
+
+            A1 = new ArchSec();
         }
 
         // metodos que tienen la capacidad de acceder a variables que estan por fuera de ellos
@@ -51,7 +54,7 @@ namespace Tarea
             return s;
         }
         // Selecciona los elementos de un vector de acuerdo a un intervalo y los carga en otro vector
-        public void SeleccionarPorPosicion(int intervalo, ref vector v2)
+        public void SeleccionarPorPosicion(int intervalo, ref Vector v2)
         {
             int numeroDePosiciones = n / intervalo;
             for (int i = 1; i <= numeroDePosiciones; i++)
@@ -59,7 +62,7 @@ namespace Tarea
         }
 
         // Reune en un vector cuales de los numeros del vector son primos
-        public void SeleccionarPrimos(ref vector v2)
+        public void SeleccionarPrimos(ref Vector v2)
         {
             NEnt n1 = new NEnt();
             for (int i = 1; i <= n; i++)
@@ -71,7 +74,7 @@ namespace Tarea
         }
 
         // Reune en un vector cuales numeros del vector no son primos
-        public void SeleccionarNoPrimos(ref vector s)
+        public void SeleccionarNoPrimos(ref Vector s)
         {
             NEnt n1 = new NEnt();
             for (int i = 1; i <= n; i++)
@@ -83,7 +86,7 @@ namespace Tarea
         }
 
         // Carga los buenos el vector de referencia
-        public void SeleccionarBuenos(ref vector v2)
+        public void SeleccionarBuenos(ref Vector v2)
         {
             double media, estandar, rango;
 
@@ -354,7 +357,7 @@ namespace Tarea
         }
 
         // Carga el vector con la Interseccion de dos vectores
-        public void InterseccionDeConjuntos(vector v1, vector v2)
+        public void InterseccionDeConjuntos(Vector v1, Vector v2)
         {
             int longitudV1 = v1.RetornarDimension();
             int longitudV2 = v2.RetornarDimension();
@@ -372,7 +375,7 @@ namespace Tarea
         }
 
         // Carga el vector con la Union de dos vectores
-        public void UnionDeConjuntos(vector v1, vector v2)
+        public void UnionDeConjuntos(Vector v1, Vector v2)
         {
             int longitudV1 = v1.RetornarDimension();
             int longitudV2 = v2.RetornarDimension();
@@ -389,7 +392,7 @@ namespace Tarea
         }
 
         // Carga el vector con la Diferencia de vectores A - B
-        public void DiferenciaDeConjuntosAB(vector v1, vector v2)
+        public void DiferenciaDeConjuntosAB(Vector v1, Vector v2)
         {
             int longitudV1 = v1.RetornarDimension();
             int[] vector1 = v1.RetornarVector();
@@ -402,7 +405,7 @@ namespace Tarea
         }
 
         // Carga el vector con la Diferencia de vectores B - A
-        public void DiferenciaDeConjuntosBA(vector v1, vector v2)
+        public void DiferenciaDeConjuntosBA(Vector v1, Vector v2)
         {
             int longitudV2 = v2.RetornarDimension();
             int[] vector2 = v2.RetornarVector();
@@ -463,9 +466,9 @@ namespace Tarea
         public void OrdenamientoPorQuickSort()
         {
             int i, d, id, dd, pivo;
-            vector p1, p2;
-            p1 = new vector();
-            p2 = new vector();
+            Vector p1, p2;
+            p1 = new Vector();
+            p2 = new Vector();
             p1.Push(1);
             p2.Push(n);
             while (!(p1.Under()))
@@ -686,7 +689,7 @@ namespace Tarea
         }
 
         // Inserta Un Vector En otro
-        public void InsertarVectorPorPosicion(vector v1, vector v2, int posicion)
+        public void InsertarVectorPorPosicion(Vector v1, Vector v2, int posicion)
         {
             int n1 = v1.RetornarDimension();
             int n2 = v2.RetornarDimension();
@@ -707,7 +710,7 @@ namespace Tarea
         // Elimina los elementos del vector indicando dos posiciones (rango)
         public void EliminarElementosDelVectorIndicandoLasPosiciones(int a, int b)
         {
-            vector Copia = new vector();
+            Vector Copia = new Vector();
 
             for (int i = 1; i <= n; i++)
             {
@@ -723,7 +726,7 @@ namespace Tarea
         // Duplicar elementos del vector
         public void DuplicarElementos()
         {
-            vector Copia = new vector();
+            Vector Copia = new Vector();
 
             for (int i = 1; i <= n; i++)
                 for (int j = 1; j <= 2; j++)
@@ -734,7 +737,7 @@ namespace Tarea
         }
 
         // Concatena dos vectores 
-        public void Concat(vector v1)
+        public void Concat(Vector v1)
         {
             int n1 = v1.n;
             for (int i = 1; i <= n1; i++)
@@ -744,9 +747,9 @@ namespace Tarea
         // Ordena los elementos de un segmento
         public void OrdenarElementosDeUnSegmento(int a, int b)
         {
-            vector Vector1 = new vector();
-            vector Vector2 = new vector();
-            vector Vector3 = new vector();
+            Vector Vector1 = new Vector();
+            Vector Vector2 = new Vector();
+            Vector Vector3 = new Vector();
 
             for (int i = 1; i <= a - 1; i++)
                 Vector1.CargarElementoXElemento(v[i]);
@@ -808,7 +811,7 @@ namespace Tarea
         // Encuentra el elemento Menos repetido entre un Segmento
         public int EncontrarElementoMenosRepetidoEntreUnSegmento(int a, int b)
         {
-            vector Vector1 = new vector();
+            Vector Vector1 = new Vector();
 
             for (int i = a; i <= b; i++)
                 Vector1.CargarElementoXElemento(v[i]);
@@ -819,22 +822,22 @@ namespace Tarea
         }
 
         // Carga en un vector la frecuencia de con la que aparece un número otra frecuencia
-        public void CargarFrecuencia(ref vector v3, vector v2)
+        public void CargarFrecuencia(ref Vector v3, Vector v2)
         {
             for (int i = 1; i <= v2.n; i++)
                 v3.CargarElementoXElemento(this.Frecuencia(v2.v[i]));
         }
 
         // Encuentra la frecuencia de distribución de un segmento
-        public void EncontrarLaFrecuenciaDeDistribucionEntreUnSegmento(int a, int b, ref vector v2, ref vector v3)
+        public void EncontrarLaFrecuenciaDeDistribucionEntreUnSegmento(int a, int b, ref Vector v2, ref Vector v3)
         {
-            vector v1 = new vector();
+            Vector v1 = new Vector();
 
             for (int i = a; i <= b; i++)
                 v1.CargarElementoXElemento(v[i]);
 
             v1.OrdenamientoBurbujaAscendente();
-            vector Copia = new vector();
+            Vector Copia = new Vector();
 
 
             for (int i = 1; i <= v1.n; i++)
@@ -907,8 +910,8 @@ namespace Tarea
             int longitud = this.n;
             int[] vector = this.v;
 
-            vector v1 = new vector();
-            vector v2 = new vector();
+            Vector v1 = new Vector();
+            Vector v2 = new Vector();
             for (int i = 1; i <= capicuas; i++)
                 v1.CargarElementoXElemento(v[i]);
 
@@ -927,9 +930,9 @@ namespace Tarea
         // Intercala los primos y no primos de un Segmento
         public void IntercalarPrimoYNoPrimoDeUnSegmento(int a, int b)
         {
-            vector Vector1 = new vector();
-            vector Vector2 = new vector();
-            vector Vector3 = new vector();
+            Vector Vector1 = new Vector();
+            Vector Vector2 = new Vector();
+            Vector Vector3 = new Vector();
 
             for (int i = 1; i <= a - 1; i++)
                 Vector1.CargarElementoXElemento(v[i]);
@@ -948,6 +951,31 @@ namespace Tarea
 
             this.v = Vector1.v;
             this.n = Vector1.n;
+        }
+
+        // Tengo el codigo bien solo me falta aprender
+        public void Grabar(string Narch1)
+        {
+            A1.Abrir_Grabar(Narch1);
+            for(int i = 1; i <= n; i++)
+            {
+                A1.Grabar(v[i]);
+            }
+            A1.Cerrar_Grabar();
+
+        }
+        public void Leer(string Narch1)
+        {
+            int i = 0;
+            ArchSec A1 = new ArchSec();
+            A1.Abrir_Leer(Narch1);
+            while (!A1.Verif_Fin())
+            {
+                i++;
+                v[i] = A1.Leer();
+            }
+            n = i;
+            A1.Cerrar_Leer();
         }
     }
 }

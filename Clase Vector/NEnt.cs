@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tarea
+namespace Clase_Vector
 {
     class NEnt
     {
@@ -59,12 +59,20 @@ namespace Tarea
             }
             return c == 2;
         }
-
         public bool VerificarCapicua()
         {
             int capicua = this.valor;
             this.Invertir();
             return capicua == this.valor;
+        }
+        public bool VerificarCuadradoPerfecto(int num)
+        {
+            int raizCua = (int)Math.Sqrt(num);
+            return raizCua * raizCua == num;
+        }
+        public bool VerificarFibonacci()
+        {
+            return VerificarCuadradoPerfecto(5 * valor * valor + 4) || VerificarCuadradoPerfecto(5 * valor * valor - 4);
         }
     }
 }
