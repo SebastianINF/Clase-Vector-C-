@@ -226,7 +226,7 @@ Abre Visual Studio 2015 en tu sistema.
 
 1. En el menú superior, selecciona "Archivo" y luego "Clonar repositorio".
 
-2. Ingresa la URL del repositorio que deseas clonar: https://github.com/SebastianINF/Clase-Vector-Csharp
+2. Ingresa la URL del repositorio que deseas clonar: https://github.com/sebanovo/Clase-Vector-Csharp
 
 3. Haz clic en el botón "Clonar" para iniciar el proceso de clonación.
 
@@ -240,7 +240,7 @@ Una vez que se complete la clonación, el repositorio estará disponible en el e
 
 ¡Listo! Has clonado con éxito el repositorio desde GitHub a Visual Studio 2015 y estás listo para comenzar a trabajar en tu proyecto.
 
-### Paso 5: Crear una Pull Request (Opcional)**:
+### Paso 5: Crear una Pull Request `Opcional`:
 
   -Si cuentas con las ganas de seguir aportando a este proyecto puedes realizar una pull request y mandarme tu trabajo y seguir mejorando este Repositorio.
   - Haz cambios en tu código y confirma tus modificaciones localmente.
