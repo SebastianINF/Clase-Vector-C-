@@ -1,4 +1,4 @@
-﻿namespace Clase_Vector
+﻿namespace vector_class_csharp 
 {
     partial class Form1
     {

@@ -1,8 +1,12 @@
 # Trabajo de la Universidad: Clase Vector en C#
 
-Este proyecto representa un trabajo académico de la universidad en el que desarrollamos una clase Vector en JavaScript. Esta clase permite realizar cálculos matemáticos utilizando un array como base y está diseñada para llevar a cabo una variedad de operaciones matemáticas.
+Este proyecto representa un trabajo académico de la universidad en el que
+desarrollamos una clase Vector en JavaScript. Esta clase permite realizar
+cálculos matemáticos utilizando un array como base y está diseñada para llevar a
+cabo una variedad de operaciones matemáticas.
 
-Visita la version Web [Clase-Vector](https://clase-vector-vanilla-javascript.vercel.app/)
+Visita la version Web
+[Clase-Vector](https://clase-vector-vanilla-javascript.vercel.app/)
 
 <div align="center">
   <a href="https://clase-vector-vanilla-javascript.vercel.app/">
@@ -10,22 +14,30 @@ Visita la version Web [Clase-Vector](https://clase-vector-vanilla-javascript.ver
   </a>
 </div>
 
-
 ## Características
 
-La clase Vector en JavaScript incluye las siguientes características y operaciones:
+La clase Vector en JavaScript incluye las siguientes características y
+operaciones:
 
-- **Creación de Vectores:** Puedes crear un nuevo objeto Vector vacío e ir cargándolo con elementos, o cargarlo con valores aleatorios en un rango específico.
-  
-- **Selección de Elementos:** La clase ofrece métodos para seleccionar elementos específicos basados en ciertos criterios, como primos, no primos, buenos valores, etc.
+- **Creación de Vectores:** Puedes crear un nuevo objeto Vector vacío e ir
+  cargándolo con elementos, o cargarlo con valores aleatorios en un rango
+  específico.
+- **Selección de Elementos:** La clase ofrece métodos para seleccionar elementos
+  específicos basados en ciertos criterios, como primos, no primos, buenos
+  valores, etc.
 
-- **Operaciones Matemáticas:** Incluye operaciones matemáticas comunes como suma, resta, producto escalar, magnitud, producto cruz y más.
+- **Operaciones Matemáticas:** Incluye operaciones matemáticas comunes como
+  suma, resta, producto escalar, magnitud, producto cruz y más.
 
-- **Ordenamiento:** Puedes ordenar el vector tanto de forma ascendente como descendente utilizando varios algoritmos, como el ordenamiento por intercambio y el ordenamiento burbuja.
+- **Ordenamiento:** Puedes ordenar el vector tanto de forma ascendente como
+  descendente utilizando varios algoritmos, como el ordenamiento por intercambio
+  y el ordenamiento burbuja.
 
-- **Búsquedas:** Ofrece búsquedas binarias y secuenciales para encontrar elementos específicos en el vector.
+- **Búsquedas:** Ofrece búsquedas binarias y secuenciales para encontrar
+  elementos específicos en el vector.
 
-- **Operaciones de Conjuntos:** Permite realizar operaciones de conjuntos como intersección, unión y diferencia entre conjuntos representados por vectores.
+- **Operaciones de Conjuntos:** Permite realizar operaciones de conjuntos como
+  intersección, unión y diferencia entre conjuntos representados por vectores.
 
 - **Eliminación de Duplicados:** Puedes eliminar duplicados del vector.
 
@@ -72,10 +84,9 @@ La clase Vector en JavaScript incluye las siguientes características y operacio
 - Intercalar par y no par
 - Intercalar primo y no primo
 
-## Ejemplo: 
+## Ejemplo:
 
 ```csharp
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -83,8 +94,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Clase_Vector
-
-class Vector
+{
+    class Vector
     {
         private const int max = 100;
         private int[] v;
@@ -114,6 +125,7 @@ class Vector
 
         // etc...
     }
+}
 ```
 
 La Clase Vector se apoya de una clase NEnt (numero entero) para funcionar
@@ -171,6 +183,7 @@ namespace Clase_Vector
             }
             valor = resultado;
         }
+
         public void Ndigs()
         {
             int numeroDigs = valor.ToString().Length;
@@ -180,6 +193,7 @@ namespace Clase_Vector
         {
             return valor % 2 == 0;
         }
+        
         public bool VerificarPrimo()
         {
             int i, c, r;
@@ -199,6 +213,17 @@ namespace Clase_Vector
             this.Invertir();
             return capicua == this.valor;
         }
+
+        public bool VerificarCuadradoPerfecto(int num)
+        {
+            int raizCua = (int)Math.Sqrt(num);
+            return raizCua * raizCua == num;
+        }
+
+        public bool VerificarFibonacci()
+        {
+            return VerificarCuadradoPerfecto(5 * valor * valor + 4) || VerificarCuadradoPerfecto(5 * valor * valor - 4);
+        }
     }
 }
 
@@ -206,15 +231,19 @@ namespace Clase_Vector
 
 # Clonar un Repositorio en Visual Studio 2015
 
-Este tutorial te guiará a través del proceso de clonar un repositorio de GitHub en Visual Studio 2015 utilizando la URL proporcionada. Nota: Tambien puedes descargar el archivo .zip y descomprimirlo en tu maquina.
+Este tutorial te guiará a través del proceso de clonar un repositorio de GitHub
+en Visual Studio 2015 utilizando la URL proporcionada. Nota: Tambien puedes
+descargar el archivo .zip y descomprimirlo en tu maquina.
 
 ## Requisitos Previos
 
 Antes de comenzar, asegúrate de tener lo siguiente:
 
-- [Visual Studio 2015](https://visualstudio.microsoft.com/vs/older-downloads/) instalado en tu sistema.
+- [Visual Studio 2015](https://visualstudio.microsoft.com/vs/older-downloads/)
+  instalado en tu sistema.
 - Una cuenta de [GitHub](https://github.com/).
-- Git instalado en tu sistema. Puedes descargarlo desde [git-scm.com](https://git-scm.com/).
+- Git instalado en tu sistema. Puedes descargarlo desde
+  [git-scm.com](https://git-scm.com/).
 
 ## Pasos para Clonar el Repositorio 🙌
 
@@ -226,27 +255,34 @@ Abre Visual Studio 2015 en tu sistema.
 
 1. En el menú superior, selecciona "Archivo" y luego "Clonar repositorio".
 
-2. Ingresa la URL del repositorio que deseas clonar: https://github.com/SebastianINF/Clase-Vector-Csharp
+2. Ingresa la URL del repositorio que deseas clonar:
+   https://github.com/SebastianINF/Clase-Vector-Csharp
 
 3. Haz clic en el botón "Clonar" para iniciar el proceso de clonación.
 
 ### Paso 3: Iniciar Sesión en GitHub
 
-Si aún no has iniciado sesión en GitHub, se te pedirá que lo hagas en este paso. Ingresa tus credenciales de GitHub si es necesario.
+Si aún no has iniciado sesión en GitHub, se te pedirá que lo hagas en este paso.
+Ingresa tus credenciales de GitHub si es necesario.
 
 ### Paso 4: Explorar el Repositorio
 
-Una vez que se complete la clonación, el repositorio estará disponible en el explorador de soluciones de Visual Studio 2015. Ahora puedes trabajar en el proyecto localmente.
+Una vez que se complete la clonación, el repositorio estará disponible en el
+explorador de soluciones de Visual Studio 2015. Ahora puedes trabajar en el
+proyecto localmente.
 
-¡Listo! Has clonado con éxito el repositorio desde GitHub a Visual Studio 2015 y estás listo para comenzar a trabajar en tu proyecto.
+¡Listo! Has clonado con éxito el repositorio desde GitHub a Visual Studio 2015 y
+estás listo para comenzar a trabajar en tu proyecto.
 
-### Paso 5: Crear una Pull Request (Opcional)**:
+### Paso 5: Crear una Pull Request (Opcional)\*\*:
 
-  -Si cuentas con las ganas de seguir aportando a este proyecto puedes realizar una pull request y mandarme tu trabajo y seguir mejorando este Repositorio.
-  - Haz cambios en tu código y confirma tus modificaciones localmente.
-  - Luego, crea una nueva rama (branch) para tu pull request.
-  - Sube tu rama a tu repositorio remoto.
-  - Visita el repositorio en GitHub y selecciona la opción "New Pull Request".
-  - Sigue las instrucciones en pantalla para crear tu pull request.
+-Si cuentas con las ganas de seguir aportando a este proyecto puedes realizar
+una pull request y mandarme tu trabajo y seguir mejorando este Repositorio.
 
-  ¡Esperamos que este repositorio te sea de ayuda!
+- Haz cambios en tu código y confirma tus modificaciones localmente.
+- Luego, crea una nueva rama (branch) para tu pull request.
+- Sube tu rama a tu repositorio remoto.
+- Visita el repositorio en GitHub y selecciona la opción "New Pull Request".
+- Sigue las instrucciones en pantalla para crear tu pull request.
+
+¡Esperamos que este repositorio te sea de ayuda!

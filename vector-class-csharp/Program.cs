@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Clase_Vector
+namespace vector_class_csharp 
 {
     static class Program
     {

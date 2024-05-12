@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
-namespace Clase_Vector
+namespace vector_class_csharp 
 {
     public partial class Form1 : Form
     {

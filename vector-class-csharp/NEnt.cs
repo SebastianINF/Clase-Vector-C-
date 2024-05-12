@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clase_Vector
+namespace vector_class_csharp 
 {
     class NEnt
     {
