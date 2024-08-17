@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace vector_class_csharp 
+namespace vector_class_csharp
 {
     class Vector
     {
         public int[] v;
         public int n;
+        public const int MAX = 1000;
 
         ArchSec A1;
         // Constructor de la clase vector
         public Vector()
         {
-            v = new int[100];
+            v = new int[MAX];
             n = 0;
 
             A1 = new ArchSec();
@@ -133,17 +134,17 @@ namespace vector_class_csharp
         {
 
             n = n1;
-            v[1] = 0; // Primer término de la serie
-            v[2] = 1; // Segundo término de la serie
 
             if (n < 1)
-                return; // No se generan términos si n es menor que 1
+                return;
 
+            v[1] = 0;
             if (n == 1)
-                return; // Solo se generó el primer término
+                return;
 
+            v[2] = 1;
             if (n == 2)
-                return; // Solo se generaron los dos primeros términos
+                return;
 
             for (int i = 3; i <= n; i++)
                 v[i] = v[i - 1] + v[i - 2];
@@ -181,10 +182,10 @@ namespace vector_class_csharp
             return Math.Sqrt(suma / n);
         }
 
-        // Busca en el vector un número y devuelve un boolean
+        // busca un elemento
         public bool BusquedaBinaria(int valorBuscado)
         {
-            this.OrdenamientoBurbujaAscendente();
+            this.BubbleSortAsc();
             int izquierda = 0;
             int derecha = n - 1;
 
@@ -196,16 +197,12 @@ namespace vector_class_csharp
                 if (v[medio] == valorBuscado)
                     return true;
 
-                // Si el valor en el medio es mayor que el valor buscado, buscamos en la mitad izquierda.
-                if (v[medio] > valorBuscado)
+                else if (v[medio] > valorBuscado)
                     derecha = medio - 1;
-
-                // Si el valor en el medio es menor que el valor buscado, buscamos en la mitad derecha.
                 else
                     izquierda = medio + 1;
             }
 
-            // El valor no se encontró en el vector.
             return false;
         }
 
@@ -242,33 +239,31 @@ namespace vector_class_csharp
         // Intercambia Dos elementos
         public void IntercambiarElementos(int a, int b)
         {
-            int variableAuxiliar = v[a];
+            int temp = v[a];
             v[a] = v[b];
-            v[b] = variableAuxiliar;
+            v[b] = temp;
         }
 
-        // Ordena el vector Intercambiando los elementos -->
-        public void OrdenamientoPorIntercambioAscendente()
+        // Ordena el vector Intercambiando los elementos (ascendente) 
+        public void BubbleSortAsc()
         {
-            for (int i = 1; i <= n; i++)
-                for (int j = 1; j <= n; j++)
-                    if (j != n)
-                        if (v[j] > v[j + 1])
-                            this.IntercambiarElementos(j, j + 1);
+            for (int i = 1; i < n; i++)
+                for (int j = i + 1; j <= n; j++)
+                    if (v[i] > v[j])
+                        this.IntercambiarElementos(i, j);
         }
 
-        // Ordena el vector Intercambiando los elementos <-- 
-        public void OrdenamientoPorIntercambioDescendente()
+        // Ordena el vector Intercambiando los elementos (descendente) 
+        public void BubbleSortDesc()
         {
-            for (int i = 1; i <= n; i++)
-                for (int j = 1; j <= n; j++)
-                    if (j != n)
-                        if (v[j] < v[j + 1])
-                            this.IntercambiarElementos(j, j + 1);
+            for (int i = 1; i < n; i++)
+                for (int j = i + 1; j <= n; j++)
+                    if (v[i] < v[j])
+                        this.IntercambiarElementos(i, j);
         }
 
-        // Ordena el vector por Selección -->
-        public void OrdenamientoPorSeleccionAscendente()
+        // Ordena el vector por Selección (ascendente) 
+        public void SelectionSortAsc()
         {
             for (int i = 1; i < n; i++)
             {
@@ -277,15 +272,14 @@ namespace vector_class_csharp
                     if (v[j] < v[indiceMinimo])
                         indiceMinimo = j;
 
-                // Intercambiar el elemento mínimo con el elemento en la posición i
                 int temp = v[i];
                 v[i] = v[indiceMinimo];
                 v[indiceMinimo] = temp;
             }
         }
 
-        //Ordena el vector por Selección <--
-        public void OrdenamientoPorSeleccionDescendente()
+        //Ordena el vector por Selección (descendente) 
+        public void SelectionSortDesc()
         {
             for (int i = 1; i < n; i++)
             {
@@ -299,48 +293,6 @@ namespace vector_class_csharp
                 v[i] = v[indiceMaximo];
                 v[indiceMaximo] = temp;
             }
-        }
-
-        // Ordena el vector por Ordenamiento burbuja -->
-        public void OrdenamientoBurbujaAscendente()
-        {
-            bool intercambio;
-            do
-            {
-                intercambio = false;
-
-                for (int i = 1; i < n; i++)
-                    if (v[i] > v[i + 1])
-                    {
-                        // Intercambiar los elementos
-                        int temp = v[i];
-                        v[i] = v[i + 1];
-                        v[i + 1] = temp;
-
-                        intercambio = true;
-                    }
-            } while (intercambio);
-        }
-
-        // Ordena el vector por Ordenamiento burbuja <-- 
-        public void OrdenamientoBurbujaDescendente()
-        {
-            bool intercambio;
-            do
-            {
-                intercambio = false;
-
-                for (int i = 1; i < n; i++)
-                    if (v[i] < v[i + 1]) // Cambiar el signo de comparación
-                    {
-                        // Intercambiar los elementos
-                        int temp = v[i];
-                        v[i] = v[i + 1];
-                        v[i + 1] = temp;
-
-                        intercambio = true;
-                    }
-            } while (intercambio);
         }
 
         // Busca Si el elemento esta en el conjunto
@@ -430,7 +382,9 @@ namespace vector_class_csharp
             v[d + 1] = ele;
             n++;
         }
-        public void OrdenamientoPorInsercion()
+
+        // Ordena el vector por Insertion sort (ascendente)
+        public void InsertionSort()
         {
             int p, d, ele;
             for (p = 2; p <= n; p++)
@@ -446,23 +400,25 @@ namespace vector_class_csharp
             }
         }
 
-        // Ordenamiento por QUICK SORT
         private void Push(int dato)
         {
             n++;
             v[n] = dato;
         }
+
         private int Pop()
         {
-            int ele;
-            ele = v[n];
+            int ele = v[n];
             n--;
             return ele;
         }
+
         private bool Under()
         {
             return n == 0;
         }
+
+        // Ordenamiento por QUICK SORT
         public void OrdenamientoPorQuickSort()
         {
             int i, d, id, dd, pivo;
@@ -503,12 +459,12 @@ namespace vector_class_csharp
         // Separa en el mismo vector los números pares y luego los impares (ordenadamente)
         public void SegmentarParImpar()
         {
-            int p, d;
             NEnt n1, n2;
             n1 = new NEnt();
             n2 = new NEnt();
-            for (p = 1; p <= n - 1; p++)
-                for (d = p + 1; d <= n; d++)
+
+            for (int p = 1; p <= n - 1; p++)
+                for (int d = p + 1; d <= n; d++)
                 {
                     n1.Cargar(v[d]);
                     n2.Cargar(v[p]);
@@ -523,12 +479,12 @@ namespace vector_class_csharp
         // Separa en el mismo vector los números primos y luego los no primos (ordenadamente)
         public void SegmentarPrimoYNoPrimo()
         {
-            int p, d;
             NEnt n1, n2;
             n1 = new NEnt();
             n2 = new NEnt();
-            for (p = 1; p <= n - 1; p++)
-                for (d = p + 1; d <= n; d++)
+
+            for (int p = 1; p <= n - 1; p++)
+                for (int d = p + 1; d <= n; d++)
                 {
                     n1.Cargar(v[d]);
                     n2.Cargar(v[p]);
@@ -543,15 +499,15 @@ namespace vector_class_csharp
         // Intercala en el mismo vector los números pares y los impares (ordenadamente)
         public void IntercalarParImpar()
         {
-            int p, d;
             NEnt n1, n2;
             bool b = true;
             n1 = new NEnt();
             n2 = new NEnt();
-            for (p = 1; p <= n - 1; p++)
+
+            for (int p = 1; p <= n - 1; p++)
             {
                 if (b)
-                    for (d = p + 1; d <= n; d++)
+                    for (int d = p + 1; d <= n; d++)
                     {
                         n1.Cargar(v[d]);
                         n2.Cargar(v[p]);
@@ -563,7 +519,7 @@ namespace vector_class_csharp
 
                     }
                 else
-                    for (d = p + 1; d <= n; d++)
+                    for (int d = p + 1; d <= n; d++)
                     {
                         n1.Cargar(v[d]);
                         n2.Cargar(v[p]);
@@ -580,15 +536,15 @@ namespace vector_class_csharp
         // Intercala en el mismo vector los números primos y no primos (ordenadamente)
         public void IntercalarPrimoYNoPrimo()
         {
-            int p, d;
             NEnt n1, n2;
             bool b = true;
             n1 = new NEnt();
             n2 = new NEnt();
-            for (p = 1; p <= n - 1; p++)
+
+            for (int p = 1; p <= n - 1; p++)
             {
                 if (b)
-                    for (d = p + 1; d <= n; d++)
+                    for (int d = p + 1; d <= n; d++)
                     {
                         n1.Cargar(v[d]);
                         n2.Cargar(v[p]);
@@ -600,7 +556,7 @@ namespace vector_class_csharp
 
                     }
                 else
-                    for (d = p + 1; d <= n; d++)
+                    for (int d = p + 1; d <= n; d++)
                     {
                         n1.Cargar(v[d]);
                         n2.Cargar(v[p]);
@@ -708,32 +664,28 @@ namespace vector_class_csharp
         }
 
         // Elimina los elementos del vector indicando dos posiciones (rango)
-        public void EliminarElementosDelVectorIndicandoLasPosiciones(int a, int b)
+        public void EliminarElementosDeUnSegmento(int a, int b)
         {
-            Vector Copia = new Vector();
+            int segmento = b - a + 1;
+            for (int i = b + 1; i <= n; i++)
+                v[i - segmento] = v[i];
 
-            for (int i = 1; i <= n; i++)
-            {
-                if (i >= a && i <= b)
-                    continue;
-                Copia.CargarElementoXElemento(v[i]);
-            }
-
-            this.v = Copia.v;
-            this.n = Copia.n;
+            for (int i = 1; i <= segmento; i++)
+                this.Pop();
         }
 
         // Duplicar elementos del vector
         public void DuplicarElementos()
         {
-            Vector Copia = new Vector();
+            int original = this.n;
+            this.n = original * 2;
 
-            for (int i = 1; i <= n; i++)
-                for (int j = 1; j <= 2; j++)
-                    Copia.CargarElementoXElemento(v[i]);
 
-            this.v = Copia.v;
-            this.n = Copia.n;
+            for (int i = original; i >= 1; i--)
+                v[2 * i] = v[i];
+
+            for (int i = 1; i <= original; i++)
+                v[2 * i - 1] = v[2 * i];
         }
 
         // Concatena dos vectores 
@@ -747,27 +699,11 @@ namespace vector_class_csharp
         // Ordena los elementos de un segmento
         public void OrdenarElementosDeUnSegmento(int a, int b)
         {
-            Vector Vector1 = new Vector();
-            Vector Vector2 = new Vector();
-            Vector Vector3 = new Vector();
+            for (int i = a; i < b; i++)
+                for (int j = i + 1; j <= b; j++)
+                    if (v[i] > v[j])
+                        this.IntercambiarElementos(i, j);
 
-            for (int i = 1; i <= a - 1; i++)
-                Vector1.CargarElementoXElemento(v[i]);
-
-            for (int i = a; i <= b; i++)
-                Vector2.CargarElementoXElemento(v[i]);
-
-            for (int i = b + 1; i <= n; i++)
-                Vector3.CargarElementoXElemento(v[i]);
-
-
-            Vector2.OrdenamientoBurbujaAscendente();
-
-            Vector1.Concat(Vector2);
-            Vector1.Concat(Vector3);
-
-            this.v = Vector1.v;
-            this.n = Vector1.n;
         }
 
         // Busca El elemento Menos Repetido de un vector
@@ -836,7 +772,7 @@ namespace vector_class_csharp
             for (int i = a; i <= b; i++)
                 v1.CargarElementoXElemento(v[i]);
 
-            v1.OrdenamientoBurbujaAscendente();
+            v1.BubbleSortAsc();
             Vector Copia = new Vector();
 
 
@@ -851,7 +787,7 @@ namespace vector_class_csharp
         // Cuenta los números que son capicuas de un vector
         public int ContarCapicuas()
         {
-            int contarCapicuas = 0;
+            int c = 0;
             NEnt n1;
             n1 = new NEnt();
 
@@ -861,15 +797,15 @@ namespace vector_class_csharp
                 if (!n1.VerificarCapicua())
                     break;
 
-                contarCapicuas++;
+                c++;
             }
-            return contarCapicuas;
+            return c;
         }
 
         // Cuenta los números que no son capicuas de un vector
         public int ContarNoCapicuas()
         {
-            int contarNoCapicuas = 0;
+            int c = 0;
             NEnt n1;
             n1 = new NEnt();
 
@@ -879,22 +815,20 @@ namespace vector_class_csharp
                 if (n1.VerificarCapicua())
                     break;
 
-                contarNoCapicuas++;
+                c++;
             }
-            return contarNoCapicuas;
+            return c;
         }
 
-        // Segmenta un Vector Los capicuas y luego los No capicuas
-        // Capicuas Ascendentemente
-        // No Capicuas Descendentemente
+        // Segmentar Los capicuas y los no capicuas
         public void SegmentarCapicuaYNoCapicua()
         {
-            int p, d;
             NEnt n1, n2;
             n1 = new NEnt();
             n2 = new NEnt();
-            for (p = 1; p <= n - 1; p++)
-                for (d = p + 1; d <= n; d++)
+
+            for (int p = 1; p <= n - 1; p++)
+                for (int d = p + 1; d <= n; d++)
                 {
                     n1.Cargar(v[d]);
                     n2.Cargar(v[p]);
@@ -904,60 +838,50 @@ namespace vector_class_csharp
 
                         this.IntercambiarElementos(d, p);
                 }
-
-            int capicuas = this.ContarCapicuas();
-            int NoCapicuas = this.ContarNoCapicuas();
-            int longitud = this.n;
-            int[] vector = this.v;
-
-            Vector v1 = new Vector();
-            Vector v2 = new Vector();
-            for (int i = 1; i <= capicuas; i++)
-                v1.CargarElementoXElemento(v[i]);
-
-            for (int i = capicuas + 1; i <= this.n; i++)
-                v2.CargarElementoXElemento(v[i]);
-
-            v1.OrdenamientoBurbujaAscendente();
-            v2.OrdenamientoBurbujaDescendente();
-
-            v1.Concat(v2);
-
-            this.v = v1.v;
-            this.n = v1.n;
         }
 
         // Intercala los primos y no primos de un Segmento
         public void IntercalarPrimoYNoPrimoDeUnSegmento(int a, int b)
         {
-            Vector Vector1 = new Vector();
-            Vector Vector2 = new Vector();
-            Vector Vector3 = new Vector();
+            NEnt n1, n2;
+            bool bandera = true;
+            n1 = new NEnt();
+            n2 = new NEnt();
 
-            for (int i = 1; i <= a - 1; i++)
-                Vector1.CargarElementoXElemento(v[i]);
+            for (int p = a; p < b; p++)
+            {
+                if (bandera)
+                    for (int d = p + 1; d <= b; d++)
+                    {
+                        n1.Cargar(v[d]);
+                        n2.Cargar(v[p]);
+                        if (n1.VerificarPrimo() && !n2.VerificarPrimo() ||
+                            n1.VerificarPrimo() && n2.VerificarPrimo() && v[d] < v[p] ||
+                           !n1.VerificarPrimo() && !n2.VerificarPrimo() && v[d] < v[p])
 
-            for (int i = a; i <= b; i++)
-                Vector2.CargarElementoXElemento(v[i]);
+                            this.IntercambiarElementos(d, p);
 
-            for (int i = b + 1; i <= n; i++)
-                Vector3.CargarElementoXElemento(v[i]);
+                    }
+                else
+                    for (int d = p + 1; d <= n; d++)
+                    {
+                        n1.Cargar(v[d]);
+                        n2.Cargar(v[p]);
+                        if (!n1.VerificarPrimo() && n2.VerificarPrimo() ||
+                            !n1.VerificarPrimo() && !n2.VerificarPrimo() && v[d] < v[p] ||
+                             n1.VerificarPrimo() && n2.VerificarPrimo() && v[d] < v[p])
 
-            Vector2.OrdenamientoBurbujaAscendente();
-            Vector2.IntercalarPrimoYNoPrimo();
-
-            Vector1.Concat(Vector2);
-            Vector1.Concat(Vector3);
-
-            this.v = Vector1.v;
-            this.n = Vector1.n;
+                            this.IntercambiarElementos(d, p);
+                    }
+                bandera = !bandera;
+            }
         }
 
-        // Tengo el codigo bien solo me falta aprender
+        // codigo para el tema de archivos
         public void Grabar(string Narch1)
         {
             A1.Abrir_Grabar(Narch1);
-            for(int i = 1; i <= n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 A1.Grabar(v[i]);
             }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +51,8 @@
             this.desviaciónEstandarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaBinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaSecuencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenamientoPorIntercambioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenamientoPorIntercambioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bubbleSortAscToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bubbleSortDescToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.unionDeConjuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.interseccionDeConjuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diferenciaDeConjuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,11 +71,12 @@
             this.encontrarElementoMenosRepetidoDeUnSegmentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encontrarLaFrecuenciaDeDistribuciónDeUnSegmentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grabarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarRandomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descargarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarElementoXElementoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenamientoPorIntercambioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenamientoBurbujaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenamientoPorInserciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenamientoQuickSortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,8 +100,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.grabarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
@@ -142,8 +141,8 @@
             this.desviaciónEstandarToolStripMenuItem,
             this.busquedaBinariaToolStripMenuItem,
             this.busquedaSecuencialToolStripMenuItem,
-            this.ordenamientoPorIntercambioToolStripMenuItem,
-            this.ordenamientoPorIntercambioToolStripMenuItem1,
+            this.bubbleSortAscToolStripMenuItem,
+            this.bubbleSortDescToolStripMenuItem1,
             this.unionDeConjuntosToolStripMenuItem,
             this.interseccionDeConjuntosToolStripMenuItem,
             this.diferenciaDeConjuntosToolStripMenuItem,
@@ -156,168 +155,168 @@
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.cargarToolStripMenuItem.Text = "Cargar";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.CargarToolStripMenuItem_Click);
             // 
             // descargarToolStripMenuItem
             // 
             this.descargarToolStripMenuItem.Name = "descargarToolStripMenuItem";
-            this.descargarToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.descargarToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.descargarToolStripMenuItem.Text = "Descargar";
             this.descargarToolStripMenuItem.Click += new System.EventHandler(this.DescargarToolStripMenuItem_Click);
             // 
             // cargarEleXEleToolStripMenuItem
             // 
             this.cargarEleXEleToolStripMenuItem.Name = "cargarEleXEleToolStripMenuItem";
-            this.cargarEleXEleToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.cargarEleXEleToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.cargarEleXEleToolStripMenuItem.Text = "Cargar Elemento X Elemento";
             this.cargarEleXEleToolStripMenuItem.Click += new System.EventHandler(this.cargarEleXEleToolStripMenuItem_Click);
             // 
             // cargarSerieToolStripMenuItem
             // 
             this.cargarSerieToolStripMenuItem.Name = "cargarSerieToolStripMenuItem";
-            this.cargarSerieToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.cargarSerieToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.cargarSerieToolStripMenuItem.Text = "Cargar Serie Aritmetica";
             this.cargarSerieToolStripMenuItem.Click += new System.EventHandler(this.cargarSerieToolStripMenuItem_Click);
             // 
             // cargarSerieFobonacciToolStripMenuItem
             // 
             this.cargarSerieFobonacciToolStripMenuItem.Name = "cargarSerieFobonacciToolStripMenuItem";
-            this.cargarSerieFobonacciToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.cargarSerieFobonacciToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.cargarSerieFobonacciToolStripMenuItem.Text = "Cargar Serie de Fibonacci";
             this.cargarSerieFobonacciToolStripMenuItem.Click += new System.EventHandler(this.cargarSerieFobonacciToolStripMenuItem_Click);
             // 
             // selecPosToolStripMenuItem
             // 
             this.selecPosToolStripMenuItem.Name = "selecPosToolStripMenuItem";
-            this.selecPosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.selecPosToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.selecPosToolStripMenuItem.Text = "Seleccionar Por Posición";
             this.selecPosToolStripMenuItem.Click += new System.EventHandler(this.selecPosToolStripMenuItem_Click);
             // 
             // selecPrimosToolStripMenuItem
             // 
             this.selecPrimosToolStripMenuItem.Name = "selecPrimosToolStripMenuItem";
-            this.selecPrimosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.selecPrimosToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.selecPrimosToolStripMenuItem.Text = "Seleccionar Primos";
             this.selecPrimosToolStripMenuItem.Click += new System.EventHandler(this.selecPrimosToolStripMenuItem_Click);
             // 
             // selecNoPrimosToolStripMenuItem
             // 
             this.selecNoPrimosToolStripMenuItem.Name = "selecNoPrimosToolStripMenuItem";
-            this.selecNoPrimosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.selecNoPrimosToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.selecNoPrimosToolStripMenuItem.Text = "Seleccionar No Primos";
             this.selecNoPrimosToolStripMenuItem.Click += new System.EventHandler(this.selecNoPrimosToolStripMenuItem_Click);
             // 
             // seleccionarBuenosToolStripMenuItem
             // 
             this.seleccionarBuenosToolStripMenuItem.Name = "seleccionarBuenosToolStripMenuItem";
-            this.seleccionarBuenosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.seleccionarBuenosToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.seleccionarBuenosToolStripMenuItem.Text = "Seleccionar Buenos";
             this.seleccionarBuenosToolStripMenuItem.Click += new System.EventHandler(this.seleccionarBuenosToolStripMenuItem_Click);
             // 
             // promedioToolStripMenuItem
             // 
             this.promedioToolStripMenuItem.Name = "promedioToolStripMenuItem";
-            this.promedioToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.promedioToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.promedioToolStripMenuItem.Text = "Promedio";
             this.promedioToolStripMenuItem.Click += new System.EventHandler(this.promedioToolStripMenuItem_Click);
             // 
             // maximoToolStripMenuItem
             // 
             this.maximoToolStripMenuItem.Name = "maximoToolStripMenuItem";
-            this.maximoToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.maximoToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.maximoToolStripMenuItem.Text = "Maximo";
             this.maximoToolStripMenuItem.Click += new System.EventHandler(this.maximoToolStripMenuItem_Click);
             // 
             // frecuenciaToolStripMenuItem
             // 
             this.frecuenciaToolStripMenuItem.Name = "frecuenciaToolStripMenuItem";
-            this.frecuenciaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.frecuenciaToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.frecuenciaToolStripMenuItem.Text = "Frecuencia";
             this.frecuenciaToolStripMenuItem.Click += new System.EventHandler(this.frecuenciaToolStripMenuItem_Click);
             // 
             // maximoYFrecuenciaToolStripMenuItem
             // 
             this.maximoYFrecuenciaToolStripMenuItem.Name = "maximoYFrecuenciaToolStripMenuItem";
-            this.maximoYFrecuenciaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.maximoYFrecuenciaToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.maximoYFrecuenciaToolStripMenuItem.Text = "Maximo y Frecuencia";
             this.maximoYFrecuenciaToolStripMenuItem.Click += new System.EventHandler(this.maximoYFrecuenciaToolStripMenuItem_Click);
             // 
             // graficarToolStripMenuItem
             // 
             this.graficarToolStripMenuItem.Name = "graficarToolStripMenuItem";
-            this.graficarToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.graficarToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.graficarToolStripMenuItem.Text = "Grafica Lineal";
             this.graficarToolStripMenuItem.Click += new System.EventHandler(this.graficarToolStripMenuItem_Click);
             // 
             // desviaciónMediaToolStripMenuItem
             // 
             this.desviaciónMediaToolStripMenuItem.Name = "desviaciónMediaToolStripMenuItem";
-            this.desviaciónMediaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.desviaciónMediaToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.desviaciónMediaToolStripMenuItem.Text = "Desviación Media";
             this.desviaciónMediaToolStripMenuItem.Click += new System.EventHandler(this.desviaciónMediaToolStripMenuItem_Click);
             // 
             // desviaciónEstandarToolStripMenuItem
             // 
             this.desviaciónEstandarToolStripMenuItem.Name = "desviaciónEstandarToolStripMenuItem";
-            this.desviaciónEstandarToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.desviaciónEstandarToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.desviaciónEstandarToolStripMenuItem.Text = "Desviación Estandar";
             this.desviaciónEstandarToolStripMenuItem.Click += new System.EventHandler(this.desviaciónEstandarToolStripMenuItem_Click);
             // 
             // busquedaBinariaToolStripMenuItem
             // 
             this.busquedaBinariaToolStripMenuItem.Name = "busquedaBinariaToolStripMenuItem";
-            this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.busquedaBinariaToolStripMenuItem.Text = "Busqueda Binaria";
             this.busquedaBinariaToolStripMenuItem.Click += new System.EventHandler(this.busquedaBinariaToolStripMenuItem_Click);
             // 
             // busquedaSecuencialToolStripMenuItem
             // 
             this.busquedaSecuencialToolStripMenuItem.Name = "busquedaSecuencialToolStripMenuItem";
-            this.busquedaSecuencialToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.busquedaSecuencialToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.busquedaSecuencialToolStripMenuItem.Text = "Busqueda Secuencial";
             this.busquedaSecuencialToolStripMenuItem.Click += new System.EventHandler(this.busquedaSecuencialToolStripMenuItem_Click);
             // 
-            // ordenamientoPorIntercambioToolStripMenuItem
+            // bubbleSortAscToolStripMenuItem
             // 
-            this.ordenamientoPorIntercambioToolStripMenuItem.Name = "ordenamientoPorIntercambioToolStripMenuItem";
-            this.ordenamientoPorIntercambioToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
-            this.ordenamientoPorIntercambioToolStripMenuItem.Text = "Ordenamiento Por Intercambio <--";
-            this.ordenamientoPorIntercambioToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoPorIntercambioToolStripMenuItem_Click);
+            this.bubbleSortAscToolStripMenuItem.Name = "bubbleSortAscToolStripMenuItem";
+            this.bubbleSortAscToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.bubbleSortAscToolStripMenuItem.Text = "Bubble Sort (Asc)";
+            this.bubbleSortAscToolStripMenuItem.Click += new System.EventHandler(this.ordenamientoPorIntercambioToolStripMenuItem_Click);
             // 
-            // ordenamientoPorIntercambioToolStripMenuItem1
+            // bubbleSortDescToolStripMenuItem1
             // 
-            this.ordenamientoPorIntercambioToolStripMenuItem1.Name = "ordenamientoPorIntercambioToolStripMenuItem1";
-            this.ordenamientoPorIntercambioToolStripMenuItem1.Size = new System.Drawing.Size(315, 26);
-            this.ordenamientoPorIntercambioToolStripMenuItem1.Text = "Ordenamiento Por Intercambio -->";
-            this.ordenamientoPorIntercambioToolStripMenuItem1.Click += new System.EventHandler(this.ordenamientoPorIntercambioToolStripMenuItem1_Click);
+            this.bubbleSortDescToolStripMenuItem1.Name = "bubbleSortDescToolStripMenuItem1";
+            this.bubbleSortDescToolStripMenuItem1.Size = new System.Drawing.Size(280, 26);
+            this.bubbleSortDescToolStripMenuItem1.Text = "Bubble Sort (Desc)";
+            this.bubbleSortDescToolStripMenuItem1.Click += new System.EventHandler(this.ordenamientoPorIntercambioToolStripMenuItem1_Click);
             // 
             // unionDeConjuntosToolStripMenuItem
             // 
             this.unionDeConjuntosToolStripMenuItem.Name = "unionDeConjuntosToolStripMenuItem";
-            this.unionDeConjuntosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.unionDeConjuntosToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.unionDeConjuntosToolStripMenuItem.Text = "Union de Conjuntos";
             this.unionDeConjuntosToolStripMenuItem.Click += new System.EventHandler(this.unionDeConjuntosToolStripMenuItem_Click);
             // 
             // interseccionDeConjuntosToolStripMenuItem
             // 
             this.interseccionDeConjuntosToolStripMenuItem.Name = "interseccionDeConjuntosToolStripMenuItem";
-            this.interseccionDeConjuntosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.interseccionDeConjuntosToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.interseccionDeConjuntosToolStripMenuItem.Text = "Interseccion de Conjuntos";
             this.interseccionDeConjuntosToolStripMenuItem.Click += new System.EventHandler(this.interseccionDeConjuntosToolStripMenuItem_Click);
             // 
             // diferenciaDeConjuntosToolStripMenuItem
             // 
             this.diferenciaDeConjuntosToolStripMenuItem.Name = "diferenciaDeConjuntosToolStripMenuItem";
-            this.diferenciaDeConjuntosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.diferenciaDeConjuntosToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.diferenciaDeConjuntosToolStripMenuItem.Text = "Diferencia de Conjuntos A - B";
             this.diferenciaDeConjuntosToolStripMenuItem.Click += new System.EventHandler(this.diferenciaDeConjuntosToolStripMenuItem_Click);
             // 
             // diferenciaDeConjuntosBAToolStripMenuItem
             // 
             this.diferenciaDeConjuntosBAToolStripMenuItem.Name = "diferenciaDeConjuntosBAToolStripMenuItem";
-            this.diferenciaDeConjuntosBAToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.diferenciaDeConjuntosBAToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.diferenciaDeConjuntosBAToolStripMenuItem.Text = "Diferencia de Conjuntos B - A";
             this.diferenciaDeConjuntosBAToolStripMenuItem.Click += new System.EventHandler(this.diferenciaDeConjuntosBAToolStripMenuItem_Click);
             // 
@@ -434,13 +433,26 @@
             this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Text = "Intercalar Primos Y No Primos De Un Segmento";
             this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem.Click += new System.EventHandler(this.intercalarPrimosYNoPrimosDeUnSegmentoToolStripMenuItem_Click);
             // 
+            // grabarToolStripMenuItem
+            // 
+            this.grabarToolStripMenuItem.Name = "grabarToolStripMenuItem";
+            this.grabarToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
+            this.grabarToolStripMenuItem.Text = "Grabar";
+            this.grabarToolStripMenuItem.Click += new System.EventHandler(this.grabarToolStripMenuItem_Click);
+            // 
+            // leerToolStripMenuItem
+            // 
+            this.leerToolStripMenuItem.Name = "leerToolStripMenuItem";
+            this.leerToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
+            this.leerToolStripMenuItem.Text = "Leer";
+            this.leerToolStripMenuItem.Click += new System.EventHandler(this.leerToolStripMenuItem_Click);
+            // 
             // menu2ToolStripMenuItem
             // 
             this.menu2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargarRandomToolStripMenuItem,
             this.descargarToolStripMenuItem1,
             this.cargarElementoXElementoToolStripMenuItem,
-            this.ordenamientoPorIntercambioToolStripMenuItem2,
             this.ordenamientoBurbujaToolStripMenuItem,
             this.ordenamientoPorInserciónToolStripMenuItem,
             this.ordenamientoQuickSortToolStripMenuItem,
@@ -473,13 +485,6 @@
             this.cargarElementoXElementoToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.cargarElementoXElementoToolStripMenuItem.Text = "Cargar Elemento X Elemento";
             this.cargarElementoXElementoToolStripMenuItem.Click += new System.EventHandler(this.cargarElementoXElementoToolStripMenuItem_Click);
-            // 
-            // ordenamientoPorIntercambioToolStripMenuItem2
-            // 
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Name = "ordenamientoPorIntercambioToolStripMenuItem2";
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Size = new System.Drawing.Size(318, 26);
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Text = "Ordenamiento Por Intercambio";
-            this.ordenamientoPorIntercambioToolStripMenuItem2.Click += new System.EventHandler(this.ordenamientoPorIntercambioToolStripMenuItem2_Click);
             // 
             // ordenamientoBurbujaToolStripMenuItem
             // 
@@ -607,17 +612,17 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(12, 205);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(398, 262);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
@@ -665,20 +670,6 @@
             this.button1.Text = "Reseteo Rapido";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // grabarToolStripMenuItem
-            // 
-            this.grabarToolStripMenuItem.Name = "grabarToolStripMenuItem";
-            this.grabarToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
-            this.grabarToolStripMenuItem.Text = "Grabar";
-            this.grabarToolStripMenuItem.Click += new System.EventHandler(this.grabarToolStripMenuItem_Click);
-            // 
-            // leerToolStripMenuItem
-            // 
-            this.leerToolStripMenuItem.Name = "leerToolStripMenuItem";
-            this.leerToolStripMenuItem.Size = new System.Drawing.Size(464, 26);
-            this.leerToolStripMenuItem.Text = "Leer";
-            this.leerToolStripMenuItem.Click += new System.EventHandler(this.leerToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -747,8 +738,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ToolStripMenuItem ordenamientoPorIntercambioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ordenamientoPorIntercambioToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bubbleSortAscToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bubbleSortDescToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem interseccionDeConjuntosToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ToolStripMenuItem unionDeConjuntosToolStripMenuItem;
@@ -760,7 +751,6 @@
         private System.Windows.Forms.ToolStripMenuItem ordenamientoBurbujaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenamientoPorInserciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenamientoQuickSortToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ordenamientoPorIntercambioToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem segmentarParYNoParToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem segmentarPrimoYNoPrimoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem intercalarParYNoParToolStripMenuItem;

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
-namespace vector_class_csharp 
+namespace vector_class_csharp
 {
     public partial class Form1 : Form
     {
@@ -28,7 +28,7 @@ namespace vector_class_csharp
         }
         private void CargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V1.CargarRandom(int.Parse(textBox3.Text), int.Parse(textBox4.Text), int.Parse(textBox5.Text));       
+            V1.CargarRandom(int.Parse(textBox3.Text), int.Parse(textBox4.Text), int.Parse(textBox5.Text));
         }
 
         private void DescargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,13 +186,13 @@ namespace vector_class_csharp
 
         private void ordenamientoPorIntercambioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V1.OrdenamientoPorIntercambioAscendente();
+            V1.BubbleSortAsc();
             textBox2.Text = V1.Descargar();
         }
 
         private void ordenamientoPorIntercambioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            V1.OrdenamientoPorIntercambioDescendente();
+            V1.BubbleSortDesc();
             textBox2.Text = V1.Descargar();
         }
         private void unionDeConjuntosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -236,13 +236,13 @@ namespace vector_class_csharp
 
         private void ordenamientoBurbujaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V2.OrdenamientoBurbujaAscendente();
+            V2.BubbleSortAsc();
             textBox1.Text = V2.Descargar();
         }
 
         private void ordenamientoPorInserciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            V2.OrdenamientoPorInsercion();
+            V2.InsertionSort();
             textBox1.Text = V2.Descargar();
         }
 
@@ -254,7 +254,7 @@ namespace vector_class_csharp
 
         private void ordenamientoPorIntercambioToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            V2.OrdenamientoBurbujaAscendente();
+            V2.BubbleSortDesc();
         }
 
         private void segmentarParYNoParToolStripMenuItem_Click(object sender, EventArgs e)
@@ -350,7 +350,7 @@ namespace vector_class_csharp
                 MessageBox.Show("Posicion fuera de los límites");
             else
             {
-                V1.EliminarElementosDelVectorIndicandoLasPosiciones(a, b);
+                V1.EliminarElementosDeUnSegmento(a, b);
                 textBox2.Text = V1.Descargar();
             }
         }
